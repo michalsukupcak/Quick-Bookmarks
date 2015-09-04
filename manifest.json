@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Quick Bookmarks",
     "icons": {
         "16": "images/icon16.png",

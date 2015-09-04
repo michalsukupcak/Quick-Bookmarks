@@ -136,11 +136,14 @@ var STORAGE_FOLDER_ID = 'quick-bookmarks-folder-id';
                     }
                 }
                 this.clearContent();
-                for (var i = 0; i < folders.length; i++) {
-                    content.appendChild(this.createFolder(folders[i]));
-                }
                 for (var i = 0; i < links.length; i++) {
                     content.appendChild(this.createLink(links[i]));
+                }
+                if (links.length > 0 && folders.length > 0) {
+                    content.appendChild(document.createElement('hr'));
+                }
+                for (var i = 0; i < folders.length; i++) {
+                    content.appendChild(this.createFolder(folders[i]));
                 }
                 this.setUIElements();
                 window.localStorage.setItem(STORAGE_FOLDER_ID, this.folderId);
